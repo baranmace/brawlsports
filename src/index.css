@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brawl-dark: #0a0a0a;
+  --brawl-gray: #1a1a1a;
+  --brawl-blue: #00d4ff;
+  --brawl-purple: #8b5cf6;
+  --brawl-yellow: #fbbf24;
+  --brawl-green: #10b981;
+  --brawl-red: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--brawl-dark);
+  color: white;
+  line-height: 1.6;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--brawl-blue), var(--brawl-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-border {
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.bg-brawl-dark {
+  background-color: var(--brawl-dark);
+}
+
+.bg-brawl-gray {
+  background-color: var(--brawl-gray);
+}
+
+.text-brawl-blue {
+  color: var(--brawl-blue);
+}
+
+.text-brawl-purple {
+  color: var(--brawl-purple);
+}
+
+.border-brawl-blue {
+  border-color: var(--brawl-blue);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
